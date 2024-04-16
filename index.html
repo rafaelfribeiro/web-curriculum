@@ -23,11 +23,6 @@
             display: flex;
         }
         
-        .experiencia p {
-            width: 30%;
-            text-align: justify;
-            text-justify: inter-word;
-        }
         
         h1,
         h2,
@@ -39,6 +34,20 @@
 
         ul{ width: 30%; }
         li{ margin-top: 5px;}
+        
+        img{max-width: 100%; height: auto;}
+
+        a:visited, a:link, a:focus, a {
+            color: inherit; 
+            text-decoration: none; 
+            outline: none;
+        }
+
+        .experiencia p {
+            width: 30%;
+            text-align: justify;
+            text-justify: inter-word;
+        }
         
         .technical-font {
             font-family: "Courier New", Courier, monospace;
@@ -55,7 +64,7 @@
         
         .avatar {
             vertical-align: middle;
-            width: 9w;
+            width: 9vw;
             height: 9vw;
             border-radius: 50%;
         }
@@ -93,31 +102,50 @@
         .progress {
             background-color: white;
             width: 0px;
-            height: 0.35em;
+            height: 100%;
             box-shadow: 3px 0px 8px 3px grey;
             border-top-left-radius: 15px;
             border-bottom-left-radius: 15px;
-            animation: 1.5s ease-out progress-effect infinite;
+            animation: 1s ease-out progress-effect infinite;
         }
         
         .escolar {
             margin: 0px 0px 1em 0px;
         }
+
+        #toggle-button {
+            position: absolute;
+            top: 20px;
+            left: 23%;
+            z-index: 999;
+            color: white;
+            font-size: 1.3vw;
+        }
+        
+        #toggle-button.barst {
+            left: 1%;
+            color: #3b3b3b;
+        }
+
         
         #lateral {
             flex-shrink: 0;
             flex-grow: 1;
             left: 0;
-            width: 30em;
+            width: 25%;
             height: 100%;
             background-color: rgb(11 95 65);
             align-content: center;
             color: white;
-            border-right-width: 0.3em;
+            border-right-width: 5px;
             border-right-style: solid;
             border-image: linear-gradient( to bottom, #2d562f, rgba(0, 0, 0, 0)) 1 100%;
-            animation: 0.5s ease-out 0s 1 slideInFromLeft;
+            transition: width 0.5s ease;
+            animation: 0.5s ease-out 0s 1 slideInFromLeft;           
         }
+        #lateral.collapsed {
+            display: none;
+        }       
         
         #main {
             flex-shrink: 0;
@@ -144,26 +172,19 @@
         
         #socials {
             position: fixed;
-            bottom: 20px;
-            right: 50px;
+            bottom: 2vw;
+            right: 4vw;
             display: flex;
             flex-direction: row;
             align-items: stretch;
         }
         
-        #socials div {
-            width: 25px;
-            height: 25px;
-            margin-left: 0.5em;
+        #socials a {
+            color: rgb(0, 119, 181);
+            font-size: 2vw;
         }
-        
-        #socials div img {
-            width: 25px;
-            height: 25px;
-        }
-        
+              
         #socials>div:nth-child(1) {
-            background-color: rgb(0, 119, 181);
             display: inline-block;
         }
         
@@ -221,7 +242,8 @@
                         <p>E-mail pessoal: rrafaelrribeiro@gmail.com</p>
                         <p>Telefone: +55 (41) 99597-4881</p>
                     </div>
-                </div>
+                </div>             
+                 
                 <div id="habilidades">
                     <h3 style="color: white;">Habilidades</h3>
 
@@ -297,6 +319,11 @@
                 </div>
             </div>
         </div>
+
+        <div id="toggle-button" class="toggle-icon" onclick="toggleLateral()">
+            <i id="toggle-icon" class="fa fa-times"></i>
+        </div>   
+
         <div id="main" class="column">
             <div class="conteudo-coluna">
                 <div id="experiencias">
@@ -399,20 +426,20 @@
                 </div>
             </div>
         </div>
-       <!-- <div id="socials">
+       <div id="socials">
             <div>
-                <a href="javascript:void(window.open('https://www.linkedin.com/in/rafael-ribeiro-32b14610a/'))">
-                    <img src="/img/linkedin.png" />
+                <a href="javascript:void(window.open('https://www.linkedin.com/in/rafael16ribeiro/'))">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+
                 </a>
             </div>
-            <div>
+            <!-- <div>
                 <a href="javascript:void(window.open('https://www.instagram.com/rafael16ribeiro/'))">
                     <img src="/img/instagram.png" />
                 </a>
-            </div>
-            <div></div>
+            </div> -->
         </div> 
-         -->
+        
 
         <script type="text/javascript">
 
@@ -436,26 +463,24 @@
                 })
             }
             setTimeout(loadProgress, 1500);
-            setTimeout(function(){document.querySelector('#main > div:nth-child(4)').remove()}, 1000);
 
-            function docReady(fn) {
-                if (document.readyState === "complete" || document.readyState === "interactive") {
-                    setTimeout(fn, 1);
+           
+            function toggleLateral() {
+                var lateral = document.getElementById('lateral');
+                var toggleButtom = document.getElementById('toggle-button');
+                var toggleIcon = document.getElementById('toggle-icon');
+               
+                if (lateral.classList.contains('collapsed')) {
+                    lateral.classList.remove('collapsed');
+                    toggleButtom.classList.remove('barst');
+                    toggleIcon.className = 'fa fa-times';
                 } else {
-                    document.addEventListener("DOMContentLoaded", fn);
+                    lateral.classList.add('collapsed');
+                    toggleButtom.classList.add('barst');
+                    toggleIcon.className = 'fa fa-bars'; 
                 }
-            }    
+            }
 
-            docReady(function() {
-                var link = document.querySelector("link[rel~='icon']");
-                if (!link) {
-                    link = document.createElement('link');
-                    link.rel = 'icon';
-                    document.getElementsByTagName('head')[0].appendChild(link);
-                }
-              //  link.href = 'https://rafael16ribeiro.000webhostapp.com/img/R.ico';
-            });
-            
         </script>
 </body>
 
