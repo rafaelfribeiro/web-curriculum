@@ -475,7 +475,6 @@
                     </div>
                 </div>
             </div>
-        </div>
 
         
             <!-- Conteúdo principal em Inglês -->
@@ -629,7 +628,7 @@
             window.onload = function() {
                 // Detecta o idioma do navegador
                 var userLang = navigator.language || navigator.userLanguage;
-                if (userLang !== 'pt-BR') {
+                if (userLang.startsWith('pt')) {
                     // Esconde o conteúdo em português
                     document.getElementById('conteudo-portugues').style.display = 'none';
                     // Mostra o conteúdo em inglês
