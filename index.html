@@ -154,7 +154,7 @@
             display: none;
         }
 
-        #main {
+        #conteudo-portugues, #conteudo-ingles {
             flex-shrink: 0;
             flex-grow: 8;
         }
@@ -276,10 +276,7 @@
 
 <body>
     <div class="container">
-        <!-- Conteúdo em Português -->
-        <div id="conteudo-portugues">
-            <!-- Conteúdo lateral em Português -->
-            <div id="lateral" class="column">
+        <div id="lateral" class="column">
                 <div class="conteudo-coluna">
                     <div id="contato">
                         <div align="center"><img src="https://raw.githubusercontent.com/rafaelfribeiro/web-curriculum/master/Images/eu.png" alt="Avatar" class="avatar" alt="Foto de Rafael"></div>
@@ -370,7 +367,7 @@
             </div>
 
             <!-- Conteúdo principal em Português -->
-            <div id="main" class="column">
+            <div id="conteudo-portugues" class="column">
                 <div class="conteudo-coluna">
                     <div id="experiencias">
                         <h1 style="margin: 1em 0px;"><i class="fa fa-briefcase" style="font-size:36px;"></i> Experiências Profissionais</h1>
@@ -480,101 +477,9 @@
             </div>
         </div>
 
-        <!-- Conteúdo em Inglês -->
-        <div id="conteudo-ingles" style="display: none;">
-            <!-- Conteúdo lateral em Inglês -->
-            <div id="lateral" class="column">
-                <div class="conteudo-coluna">
-                    <div id="contato">
-                        <div align="center"><img src="https://raw.githubusercontent.com/rafaelfribeiro/web-curriculum/master/Images/eu.png" alt="Avatar" class="avatar" alt="picture of Rafael"></div>
-                        <h2 style="color: white;text-align: center;">Rafael Ribeiro</h2>
-                        <div>
-                            <p>Email: rrafaelrribeiro@gmail.com</p>
-                            <p>Phone: +55 (41) 99597-4881</p>
-                        </div>
-                    </div>
-
-                    <div id="habilidades">
-                        <h3 style="color: white;">Skills</h3>
-                        <h4>Python</h4>
-                        <div class="bar">
-                            <div class="progress" style=" border-radius: 15px;"></div>
-                        </div>
-
-                        <h4>VB.NET</h4>
-                        <div class="bar">
-                            <div class="progress" style=" border-radius: 15px;"></div>
-                        </div>
-
-                        <h4>C#</h4>
-                        <div class="bar">
-                            <div class="progress" style=" border-radius: 15px;"></div>
-                        </div>
-
-                        <h4>Java</h4>
-                        <div class="bar">
-                            <div class="progress"></div>
-                        </div>
-
-                        <h4>Node.js</h4>
-                        <div class="bar">
-                            <div class="progress"></div>
-                        </div>
-
-                        <h4>JavaScript</h4>
-                        <div class="bar">
-                            <div class="progress"></div>
-                        </div>
-
-                        <h4>Spark</h4>
-                        <div class="bar">
-                            <div class="progress"></div>
-                        </div>
-
-                        <h4>CSS</h4>
-                        <div class="bar">
-                            <div class="progress"></div>
-                        </div>
-
-                        <h4>SQL and MySQL</h4>
-                        <div class="bar">
-                            <div class="progress" style=" border-radius: 15px;"></div>
-                        </div>
-
-                        <h4>NoSQL</h4>
-                        <div class="bar">
-                            <div class="progress"></div>
-                        </div>
-                    </div>
-
-                    <div id="idiomas">
-                        <h3 style="color: white;">Languages</h3>
-
-                        <h4>Portuguese</h4>
-                        <div class="bar">
-                            <div class="progress" style=" border-radius: 15px;"></div>
-                        </div>
-
-                        <h4>English</h4>
-                        <div class="bar">
-                            <div class="progress"></div>
-                        </div>
-
-                        <h4>German</h4>
-                        <div class="bar">
-                            <div class="progress"></div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div id="toggle-button" class="toggle-icon" onclick="toggleLateral()">
-                <i id="toggle-icon" class="fa fa-times"></i>
-            </div>
-
+        
             <!-- Conteúdo principal em Inglês -->
-            <div id="main" class="column">
+            <div id="conteudo-ingles" class="column">
                 <div class="conteudo-coluna">
                     <div id="experiencias">
                         <h1 style="margin: 1em 0px;"><i class="fa fa-briefcase" style="font-size:36px;"></i> Professional Experiences</h1>
