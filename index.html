@@ -168,12 +168,12 @@
             margin-top: 1vw;
         }
 
-        #idiomas {
+        .idiomas {
             margin-top: 2vw;
         }
 
         #habilidades h4,
-        #idiomas h4 {
+        .idiomas h4 {
             color: white;
             font-size: 12px;
         }
@@ -263,7 +263,7 @@
                 font-size: 11px;
             }
 
-            #idiomas {
+            .idiomas {
                 margin-top: 1vw;
             }
 
@@ -283,12 +283,14 @@
                         <h2 style="color: white;text-align: center;">Rafael Ribeiro</h2>
                         <div>
                             <p>E-mail: rrafaelrribeiro@gmail.com</p>
-                            <p>Telefone: +55 (41) 99597-4881</p>
+                            <p id="tel-portugues">Telefone: +55 (41) 99597-4881</p>
+                            <p id="tel-ingles">Phone: +55 (41) 99597-4881</p>
                         </div>
                     </div>
 
                     <div id="habilidades">
-                        <h3 style="color: white;">Habilidades</h3>
+                        <h3 id="skill-portugues" style="color: white;">Habilidades</h3>
+                        <h3 id="skill-ingles" style="color: white;">Skills</h3>
                         <h4>Python</h4>
                         <div class="bar">
                             <div class="progress" style=" border-radius: 15px;"></div>
@@ -340,9 +342,8 @@
                         </div>
                     </div>
 
-                    <div id="idiomas">
+                    <div class="idiomas" id="idiomas-portugues">
                         <h3 style="color: white;">Idiomas</h3>
-
                         <h4>Português</h4>
                         <div class="bar">
                             <div class="progress" style=" border-radius: 15px;"></div>
@@ -354,6 +355,24 @@
                         </div>
 
                         <h4>Alemão</h4>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+
+                    </div>
+                    <div class="idiomas" id="idiomas-ingles">
+                        <h3 style="color: white;">Languages</h3>
+                        <h4>Portuguese</h4>
+                        <div class="bar">
+                            <div class="progress" style=" border-radius: 15px;"></div>
+                        </div>
+
+                        <h4>English</h4>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+
+                        <h4>German</h4>
                         <div class="bar">
                             <div class="progress"></div>
                         </div>
@@ -588,7 +607,7 @@
 
         <script type="text/javascript">
             function loadProgress() {
-                var position = [100, 100, 80, 70, 90, 90, 95, 70, 100, 60, 100, 80, 30];
+                var position = [100, 100, 80, 70, 90, 90, 95, 70, 100, 60, 100, 80, 30, 100, 80, 30];
                 Array.from(document.getElementsByClassName('progress')).forEach((element, i) => {
 
                     var id = null;
@@ -629,11 +648,24 @@
                 // Detecta o idioma do navegador
                 var userLang = navigator.language || navigator.userLanguage;
                 if (userLang.startsWith('pt')) {
+                    
+                    document.getElementById('tel-ingles').style.display = 'none';
                     document.getElementById('conteudo-ingles').style.display = 'none';
+                    document.getElementById('skill-ingles').style.display = 'none';
+                    document.getElementById('idiomas-ingles').style.display = 'none';
+                    document.getElementById('tel-portugues').removeAttribute('style');
                     document.getElementById('conteudo-portugues').removeAttribute('style');
+                    document.getElementById('skill-portugues').removeAttribute('style');
+                    document.getElementById('idiomas-portugues').removeAttribute('style');
                 }else{
+                    document.getElementById('tel-portugues').style.display = 'none';
                     document.getElementById('conteudo-portugues').style.display = 'none';
+                    document.getElementById('skill-portugues').style.display = 'none';
+                    document.getElementById('idioma-portugues').style.display = 'none';
+                    document.getElementById('tel-ingles').removeAttribute('style');
                     document.getElementById('conteudo-ingles').removeAttribute('style');
+                    document.getElementById('skill-ingles').removeAttribute('style');
+                    document.getElementById('idiomas-ingles').removeAttribute('style');
                     
                 }
             };
