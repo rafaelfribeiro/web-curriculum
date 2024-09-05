@@ -3,18 +3,15 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://raw.githubusercontent.com/rafaelfribeiro/web-curriculum/master/Images/rafael-ribeiro.ico" rel="shortcut icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Rafael Ribeiro</title>
-</head>
-
-<body>
     <style type="text/css">
         html {
             height: 100%;
         }
-        
+
         body {
             font-family: "Roboto", sans-serif;
             margin: 0px;
@@ -22,8 +19,7 @@
             overflow: hidden;
             display: flex;
         }
-        
-        
+
         h1,
         h2,
         h3,
@@ -32,14 +28,25 @@
             color: #3b3b3b
         }
 
-        ul{ width: 30%; }
-        li{ margin-top: 5px;}
-        
-        img{max-width: 100%; height: auto;}
+        ul {
+            width: 30%;
+        }
 
-        a:visited, a:link, a:focus, a {
-            color: inherit; 
-            text-decoration: none; 
+        li {
+            margin-top: 5px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a:visited,
+        a:link,
+        a:focus,
+        a {
+            color: inherit;
+            text-decoration: none;
             outline: none;
         }
 
@@ -48,57 +55,57 @@
             text-align: justify;
             text-justify: inter-word;
         }
-        
+
         .technical-font {
             font-family: "Courier New", Courier, monospace;
             letter-spacing: 3px;
-            color: #555454; 
+            color: #555454;
         }
-       
+
         .container {
             display: flex;
             flex-direction: row;
             align-items: stretch;
             height: 100%;
         }
-        
+
         .avatar {
             vertical-align: middle;
             width: 9vw;
             height: 9vw;
             border-radius: 50%;
         }
-        
+
         .column {
             height: 100%;
             display: flex;
             flex-direction: column;
         }
-        
+
         .conteudo-coluna {
             overflow-y: auto;
             padding: 3vw 3vw 0px 3vw;
         }
-        
+
         .description {
             border-bottom: 1px solid #555;
             padding-bottom: 1em;
             margin-bottom: 3vw;
         }
-        
+
         .experiencia {
             animation: 1s ease-out 0.5s 1 slideInFromBottom;
             animation-fill-mode: forwards;
             opacity: 0;
         }
-        
+
         .bar {
             width: 100%;
             background-color: rgb(0 120 77);
             height: 0.35em;
             border-radius: 15px;
         }
-        
+
         .progress {
             background-color: white;
             width: 0px;
@@ -108,7 +115,7 @@
             border-bottom-left-radius: 15px;
             animation: 1s ease-out progress-effect infinite;
         }
-        
+
         .escolar {
             margin: 0px 0px 1em 0px;
         }
@@ -121,13 +128,12 @@
             color: white;
             font-size: 1.3vw;
         }
-        
+
         #toggle-button.barst {
             left: 1%;
             color: #3b3b3b;
         }
 
-        
         #lateral {
             flex-shrink: 0;
             flex-grow: 1;
@@ -139,37 +145,43 @@
             color: white;
             border-right-width: 5px;
             border-right-style: solid;
-            border-image: linear-gradient( to bottom, #2d562f, rgba(0, 0, 0, 0)) 1 100%;
+            border-image: linear-gradient(to bottom, #2d562f, rgba(0, 0, 0, 0)) 1 100%;
             transition: width 0.5s ease;
-            animation: 0.5s ease-out 0s 1 slideInFromLeft;           
+            animation: 0.5s ease-out 0s 1 slideInFromLeft;
         }
+
         #lateral.collapsed {
             display: none;
-        }       
-        
+        }
+
         #main {
             flex-shrink: 0;
             flex-grow: 8;
         }
-        
+
         #contato p {
             margin: 0.5em 0px;
             font-size: 13px;
         }
-        
-        #habilidades{ margin-top: 1vw;}
-        #idiomas{margin-top: 2vw;}
-        
+
+        #habilidades {
+            margin-top: 1vw;
+        }
+
+        #idiomas {
+            margin-top: 2vw;
+        }
+
         #habilidades h4,
         #idiomas h4 {
             color: white;
             font-size: 12px;
         }
-        
+
         #escolaridade div h3 {
             margin-bottom: 0px;
         }
-        
+
         #socials {
             position: fixed;
             bottom: 2vw;
@@ -178,70 +190,70 @@
             flex-direction: row;
             align-items: stretch;
         }
-        
+
         #socials a {
             color: rgb(0, 119, 181);
             font-size: 2vw;
         }
-              
+
         #socials>div:nth-child(1) {
             display: inline-block;
         }
-        
+
         #socials>div:nth-child(2) {
             background-image: radial-gradient(circle at 30% 107%, rgb(253, 244, 151) 0%, rgb(253, 244, 151) 5%, rgb(253, 89, 73) 45%, rgb(214, 36, 159) 60%, rgb(40, 90, 235) 90%);
             max-width: 135px;
             display: block;
         }
 
-
         @keyframes progress-effect {
             0% {
                 box-shadow: 3px 0px 8px 3px grey;
             }
+
             50% {
                 box-shadow: 0px 0px 0px 0px grey;
             }
+
             100% {
                 box-shadow: 3px 0px 8px 3px grey;
             }
         }
-        
+
         @keyframes slideInFromLeft {
             0% {
                 opacity: 0;
                 transform: translateX(-100%);
             }
+
             100% {
                 opacity: 1;
                 transform: translateX(0);
             }
         }
-        
+
         @keyframes slideInFromBottom {
             0% {
                 opacity: 0;
                 transform: translateY(-100%);
             }
+
             100% {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
-
-
-
-
         @media screen and (max-height: 880px) {
-            h4{
-                font-size: 0.75em!important; 
+            h4 {
+                font-size: 0.75em !important;
             }
 
             #lateral {
                 width: 21%;
-                font-size: 0.8em; 
+                font-size: 0.8em;
             }
+
             .avatar {
                 width: 5vw;
                 height: 5vw;
@@ -252,117 +264,120 @@
             }
 
             #idiomas {
-               margin-top: 1vw;
+                margin-top: 1vw;
             }
-            
+
             #toggle-button {
                 left: 19%;
             }
         }
-
-
-
     </style>
+</head>
+
+<body>
     <div class="container">
-        <div id="lateral" class="column">
-            <div class="conteudo-coluna">
-                <div id="contato">
-                    <div align="center"><img src="https://raw.githubusercontent.com/rafaelfribeiro/web-curriculum/master/Images/eu.png" alt="Avatar" class="avatar" alt="picture of Rafael"></div>
-                    <h2 style="color: white;text-align: center;">Rafael Ribeiro</h2>
-                    <div>
-                        <p>E-mail: rrafaelrribeiro@gmail.com</p>
-                        <p>Telefone: +55 (41) 99597-4881</p>
-                    </div>
-                </div>             
-                 
-                <div id="habilidades">
-                    <h3 style="color: white;">Habilidades</h3>
-
-                    <h4>Python</h4>
-                    <div class="bar">
-                        <div class="progress" style=" border-radius: 15px;"></div>
+        <!-- Conteúdo em Português -->
+        <div id="conteudo-portugues">
+            <!-- Conteúdo lateral em Português -->
+            <div id="lateral" class="column">
+                <div class="conteudo-coluna">
+                    <div id="contato">
+                        <div align="center"><img src="https://raw.githubusercontent.com/rafaelfribeiro/web-curriculum/master/Images/eu.png" alt="Avatar" class="avatar" alt="Foto de Rafael"></div>
+                        <h2 style="color: white;text-align: center;">Rafael Ribeiro</h2>
+                        <div>
+                            <p>E-mail: rrafaelrribeiro@gmail.com</p>
+                            <p>Telefone: +55 (41) 99597-4881</p>
+                        </div>
                     </div>
 
-                    <h4>VB.NET</h4>
-                    <div class="bar">
-                        <div class="progress" style=" border-radius: 15px;"></div>
+                    <div id="habilidades">
+                        <h3 style="color: white;">Habilidades</h3>
+                        <h4>Python</h4>
+                        <div class="bar">
+                            <div class="progress" style=" border-radius: 15px;"></div>
+                        </div>
+
+                        <h4>VB.NET</h4>
+                        <div class="bar">
+                            <div class="progress" style=" border-radius: 15px;"></div>
+                        </div>
+
+                        <h4>C#</h4>
+                        <div class="bar">
+                            <div class="progress" style=" border-radius: 15px;"></div>
+                        </div>
+
+                        <h4>Java</h4>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+
+                        <h4>Node.js</h4>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+
+                        <h4>JavaScript</h4>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+
+                        <h4>Spark</h4>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+
+                        <h4>CSS</h4>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+
+                        <h4>SQL e MySQL</h4>
+                        <div class="bar">
+                            <div class="progress" style=" border-radius: 15px;"></div>
+                        </div>
+
+                        <h4>NoSQL</h4>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
                     </div>
 
-                    <h4>C#</h4>
-                    <div class="bar">
-                        <div class="progress" style=" border-radius: 15px;"></div>
-                    </div>
+                    <div id="idiomas">
+                        <h3 style="color: white;">Idiomas</h3>
 
-                    <h4>Java</h4>
-                    <div class="bar">
-                        <div class="progress"></div>
-                    </div>
+                        <h4>Português</h4>
+                        <div class="bar">
+                            <div class="progress" style=" border-radius: 15px;"></div>
+                        </div>
 
-                    <h4>Node.js</h4>
-                    <div class="bar">
-                        <div class="progress"></div>
-                    </div>
-    
-                    <h4>JavaScript</h4>
-                    <div class="bar">
-                        <div class="progress"></div>
-                    </div>
-                    
-                    <h4>Spark</h4>
-                    <div class="bar">
-                        <div class="progress" ></div>
-                    </div>
+                        <h4>Inglês</h4>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
 
-                    <h4>CSS</h4>
-                    <div class="bar">
-                        <div class="progress"></div>
+                        <h4>Alemão</h4>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+
                     </div>
-
-                    <h4>SQL e MySQL</h4>
-                    <div class="bar">
-                        <div class="progress" style=" border-radius: 15px;"></div>
-                    </div>
-
-                    <h4>NoSQL</h4>
-                    <div class="bar">
-                        <div class="progress"></div>
-                    </div>
-
-                </div>
-                <div id="idiomas">
-                    <h3 style="color: white;">Idiomas</h3>
-
-                    <h4>Português</h4>
-                    <div class="bar">
-                        <div class="progress" style=" border-radius: 15px;"></div>
-                    </div>
-
-                    <h4>Inglês</h4>
-                    <div class="bar">
-                        <div class="progress"></div>
-                    </div>
-
-                    <h4>Alemão</h4>
-                    <div class="bar">
-                        <div class="progress"></div>
-                    </div>
-
                 </div>
             </div>
-        </div>
 
-        <div id="toggle-button" class="toggle-icon" onclick="toggleLateral()">
-            <i id="toggle-icon" class="fa fa-times"></i>
-        </div>   
+            <div id="toggle-button" class="toggle-icon" onclick="toggleLateral()">
+                <i id="toggle-icon" class="fa fa-times"></i>
+            </div>
 
-        <div id="main" class="column">
-            <div class="conteudo-coluna">
-                <div id="experiencias">
-                    <h1 style="margin: 1em 0px;"><i class="fa fa-briefcase" style="font-size:36px;"></i> Experiências Profissionais</h1>
-                    <div class="experiencia">
-                        <h2>BRADESCO S/A - Analista</h2>
-                        <p class="technical-font">Julho 2022 - Presente</p>
-                        <p>
+            <!-- Conteúdo principal em Português -->
+            <div id="main" class="column">
+                <div class="conteudo-coluna">
+                    <div id="experiencias">
+                        <h1 style="margin: 1em 0px;"><i class="fa fa-briefcase" style="font-size:36px;"></i> Experiências Profissionais</h1>
+                        <div class="experiencia">
+                            <h2>BRADESCO S/A - Analista</h2>
+                            <p class="technical-font">Julho 2022 - Presente</p>
+                            <p>
                             <ul>
                                 <li>Automação de processos e ETLs utilizando Python, C#, VB.NET e SAS</li>
                                 <li>Estudos de Fraude e PLDFT para aplicação de regras, cenários e respostas de Ofício ao BACEN utilizando SAS ou Spark consumindo dados do ambiente Datalake/Hadoop, SAS Grid, Teradata, streaming de dados ou arquivos batch</li>
@@ -372,147 +387,329 @@
                                 <li>Text Mining e NLP</li>
                                 <li>Confecção de relatórios em tempo real</li>
                             </ul>
-                        </p>
+                            </p>
+                        </div>
+                        <div class="experiencia">
+                            <h2>BRADESCO S/A - Analista</h2>
+                            <p class="technical-font">Novembro 2018 - Junho 2022</p>
+                            <p>Além de cumprir as astribuições desempanhadas enquanto estagiário, eu criei um portal administrativo para a centralização de informações referentes às áreas administrativas da instituição, análise de indicadores, entrega de painéis
+                                de premiação bem como uma área para contestação dos resultados, confecção e entrega de dashboards que consomem dados de um <i>datawarehouse</i> também estruturado após a minha efetivação.
+                                <br>Desde então estive focado em melhorias de processos e segui com a manutenção dessa robusta ferramenta que trouxe agilidade, controle, eficiência e economia para a rede.
+                            </p>
+                        </div>
+                        <div class="experiencia">
+                            <h2>BRADESCO S/A - Estagiário</h2>
+                            <p class="technical-font">Março 2018 - Novembro 2018</p>
+                            <p class="description">Manutenção e criação de ferramentas desktop em VB.NET e aplicações web PHP.<br> Responsável direto pelo planejamento e desenvolvimento de 2 sistemas que substituíram 3 sistemas que são utilizados hoje em todas as agências do varejo
+                                do Bradesco para controle de gastos e campanhas contra desperdício.</p>
+                        </div>
+                        <div class="experiencia">
+                            <h2>SOFTWALL SOLUÇÕES EM TECNOLOGIA - Analista de Suporte</h2>
+                            <p class="technical-font">Outubro 2016 - Fevereiro 2018</p>
+                            <p class="description">Suporte N1 e em casos, N2 para clientes. Instalação, configuração e manutenção de servidores de AD, DNS, DHCP, FileServer e firewalls. <br>Rotinas de backup com Iperius Backup e Veeam Backup.Participação em projetos novos da empresa
+                                como integração do sistema de chamados com o PowerBI para criação de relatórios em tempo real.</p>
+                        </div>
+                        <div class="experiencia">
+                            <h2>20º BATALHÃO DE INFANTARIA BLINDADO - Aspirante</h2>
+                            <p class="technical-font">Fevereiro 2014 - Dezembro 2014</p>
+                            <p class="description">Periodo de Formação e Aplicação - (05/2014 a 11/2014)<br> NPOR/CPOR são núcleos e centros de formação do Oficial Temporário do Exército Brasileiro, Onde são desenvolvidas e aprimoradas diversos atributos das áreas afetivastais como
+                                equilíbrio emocional, cooperação, zelo, liderança, disciplina, persistência,rusticidade, entre outros afin de consolidar o caráter do Oficial da Reserva e adquirir os atributos necessários para a liderança de um pelotão.
+                            </p>
+                        </div>
+                        <div class="experiencia">
+                            <h2>AUTOMA CONSULTORIA &amp; INFORMÁTICA LTDA - Menor Aprendiz</h2>
+                            <p class="technical-font">Fevereiro 2010 - Janeiro 2011</p>
+                            <p class="description">(Empresa Nacional de médio porte do segmento tecnologia e informática)<br> Menor aprendiz - setor administrativo (02/2010 a 07/2010)<br> Menor aprendiz — setor de tecnologia da informação - TI (07/2010 a 01/2011)<br> Rotinas administrativas
+                                — controle eletrônico de documentos Lançamento de dados financeiros para conciliação bancária — SGI/ERP Lançamento de dados em sistema financeiro - ERP.<br> Arquivamento de documentos e cópias de segurança.<br>Configuração de estações
+                                de trabalho em ambiente de intranet.
+                            </p>
+                        </div>
                     </div>
-                    <div class="experiencia">
-                        <h2>BRADESCO S/A - Analista</h2>
-                        <p class="technical-font">Novembro 2018 - Junho 2022</p>
-                        <p>Além de cumprir as astribuições desempanhadas enquanto estagiário, eu criei um portal administrativo para a centralização de informações referentes às áreas administrativas da instituição, análise de indicadores, entrega de painéis
-                            de premiação bem como uma área para contestação dos resultados, confecção e entrega de dashboards que consomem dados de um <i>datawarehouse</i> também estruturado após a minha efetivação.
-                            <br>Desde então estive focado em melhorias de processos e segui com a manutenção dessa robusta ferramenta que trouxe agilidade, controle, eficiência e economia para a rede.
-                        </p>
-                    </div>
-                    <div class="experiencia">
-                        <h2>BRADESCO S/A - Estagiário</h2>
-                        <p class="technical-font">Março 2018 - Novembro 2018</p>
-                        <p class="description">Manutenção e criação de ferramentas desktop em VB.NET e aplicações web PHP.<br> Responsável direto pelo planejamento e desenvolvimento de 2 sistemas que substituíram 3 sistemas que são utilizados hoje em todas as agências do varejo
-                            do Bradesco para controle de gastos e campanhas contra desperdício.</p>
-                    </div>
-                    <div class="experiencia">
-                        <h2>SOFTWALL SOLUÇÕES EM TECNOLOGIA - Analista de Suporte</h2>
-                        <p class="technical-font">Outubro 2016 - Fevereiro 2018</p>
-                        <p class="description">Suporte N1 e em casos, N2 para clientes. Instalação, configuração e manutenção de servidores de AD, DNS, DHCP, FileServer e firewalls. <br>Rotinas de backup com Iperius Backup e Veeam Backup.Participação em projetos novos da empresa
-                            como integração do sistema de chamados com o PowerBI para criação de relatórios em tempo real.</p>
-                    </div>
-                    <div class="experiencia">
-                        <h2>20º BATALHÃO DE INFANTARIA BLINDADO - Aspirante</h2>
-                        <p class="technical-font">Fevereiro 2014 - Dezembro 2014</p>
-                        <p class="description">Periodo de Formação e Aplicação - (05/2014 a 11/2014)<br> NPOR/CPOR são núcleos e centros de formação do Oficial Temporário do Exército Brasileiro, Onde são desenvolvidas e aprimoradas diversos atributos das áreas afetivastais como
-                            equilíbrio emocional, cooperação, zelo, liderança, disciplina, persistência,rusticidade, entre outros afin de consolidar o caráter do Oficial da Reserva e adquirir os atributos necessários para a liderança de um pelotão.
-                        </p>
-                    </div>
-                    <div class="experiencia">
-                        <h2>AUTOMA CONSULTORIA &amp; INFORMÁTICA LTDA - Menor Aprendiz</h2>
-                        <p class="technical-font">Fevereiro 2010 - Janeiro 2011</p>
-                        <p class="description">(Empresa Nacional de médio porte do segmento tecnologia e informática)<br> Menor aprendiz - setor administrativo (02/2010 a 07/2010)<br> Menor aprendiz — setor de tecnologia da informação - TI (07/2010 a 01/2011)<br> Rotinas administrativas
-                            — controle eletrônico de documentos Lançamento de dados financeiros para conciliação bancária — SGI/ERP Lançamento de dados em sistema financeiro - ERP.<br> Arquivamento de documentos e cópias de segurança.<br>Configuração de estações
-                            de trabalho em ambiente de intranet.
-                        </p>
-                    </div>
-                    
-                    
-                    
-                    
-                </div>
-                
-                <div id="escolaridade">
-                    <h1 style="margin: 1em -0px;"><img src="https://raw.githubusercontent.com/rafaelfribeiro/web-curriculum/master/Images/file-certificate.svg" style="width: 30px;">  Cursos e Certificados</h1>
 
-                    <div class="experiencia">
-                        <h3>Microsoft - AZ 900 Fundamentals</h3>
-                        <p class="technical-font escolar">Dezembro 2023</p>
-                    </div>
-                    <div class="experiencia">
-                        <h3>Alura - Kafka: Produtores, consumidores e Streams</h3>
-                        <p class="technical-font escolar">Dezembro 2023</p>
-                    </div>
-                    <div class="experiencia">
-                        <h3>Alura - Kafka: Fast Delegate, evolução e cluster de brokers</h3>
-                        <p class="technical-font escolar">Dezembro 2023</p>
-                    </div>                    
-                    <div class="experiencia">
-                        <h3>Databricks - Fundamentals of the Databricks Lakehouse Platform Accreditation (V2)</h3>
-                        <p class="technical-font escolar">Junho 2023</p>
-                    </div>
-                    <div class="experiencia">
-                        <h3>Infomev - M2 - Programação SAS + Ênfase em Estatística</h3>
-                        <p class="technical-font escolar">Novembro 2022</p>
-                    </div>
-                    <div class="experiencia">
-                        <h3>Infomev - M3 - Macro Linguagem SAS | (SAS Macro Language)</h3>
-                        <p class="technical-font escolar">Novembro 2022</p>
-                    </div>
-                    <div class="experiencia">
-                        <h3>Infomev - M4 - SAS Enterprise Miner</h3>
-                        <p class="technical-font escolar">Novembro 2022</p>
-                    </div>
-                </div>
-                    
+                    <div id="escolaridade">
+                        <h1 style="margin: 1em -0px;"><img src="https://raw.githubusercontent.com/rafaelfribeiro/web-curriculum/master/Images/file-certificate.svg" style="width: 30px;"> Cursos e Certificados</h1>
 
-                <div id="escolaridade">
-                    <h1 style="margin: 1em -0px;"><i class="fa fa-graduation-cap"></i> Escolaridade</h1>
-                    <div class="experiencia">
-                        <h3>Bacharel em Sistemas de Informação - Universidade Positivo, Curitiba</h3>
-                        <p class="technical-font escolar">Fevereiro 2015 - Março 2021</p>
-                        <!-- <p>Estou cursando uma única matéria pendente, em 2016 eu pedi transferência de campus durante o 1º semestre e a prova dessa matéria já havia ocorrido no campus em que fui transferido.</p> -->
+                        <div class="experiencia">
+                            <h3>Microsoft - AZ 900 Fundamentals</h3>
+                            <p class="technical-font escolar">Dezembro 2023</p>
+                        </div>
+                        <div class="experiencia">
+                            <h3>Alura - Kafka: Produtores, consumidores e Streams</h3>
+                            <p class="technical-font escolar">Dezembro 2023</p>
+                        </div>
+                        <div class="experiencia">
+                            <h3>Alura - Kafka: Fast Delegate, evolução e cluster de brokers</h3>
+                            <p class="technical-font escolar">Dezembro 2023</p>
+                        </div>
+                        <div class="experiencia">
+                            <h3>Databricks - Fundamentals of the Databricks Lakehouse Platform Accreditation (V2)</h3>
+                            <p class="technical-font escolar">Junho 2023</p>
+                        </div>
+                        <div class="experiencia">
+                            <h3>Infomev - M2 - Programação SAS + Ênfase em Estatística</h3>
+                            <p class="technical-font escolar">Novembro 2022</p>
+                        </div>
+                        <div class="experiencia">
+                            <h3>Infomev - M3 - Macro Linguagem SAS | (SAS Macro Language)</h3>
+                            <p class="technical-font escolar">Novembro 2022</p>
+                        </div>
+                        <div class="experiencia">
+                            <h3>Infomev - M4 - SAS Enterprise Miner</h3>
+                            <p class="technical-font escolar">Novembro 2022</p>
+                        </div>
                     </div>
-                    <div class="experiencia">
-                        <h3>Técnico em Redes - Federação das Industrias do Estado do Paraná - FIEP, Curitiba</h3>
-                        <p class="technical-font escolar">Fevereiro 2013 - Junho 2013</p>
+
+                    <div id="escolaridade">
+                        <h1 style="margin: 1em -0px;"><i class="fa fa-graduation-cap"></i> Escolaridade</h1>
+                        <div class="experiencia">
+                            <h3>Bacharel em Sistemas de Informação - Universidade Positivo, Curitiba</h3>
+                            <p class="technical-font escolar">Fevereiro 2015 - Março 2021</p>
+                            <!-- <p>Estou cursando uma única matéria pendente, em 2016 eu pedi transferência de campus durante o 1º semestre e a prova dessa matéria já havia ocorrido no campus em que fui transferido.</p> -->
+                        </div>
+                        <div class="experiencia">
+                            <h3>Técnico em Redes - Federação das Industrias do Estado do Paraná - FIEP, Curitiba</h3>
+                            <p class="technical-font escolar">Fevereiro 2013 - Junho 2013</p>
+                        </div>
+                        <div class="experiencia">
+                            <h3>Ensino Fundamental e Médio - Colégio Curitibano Adventista, Curitiba</h3>
+                            <p class="technical-font escolar">Janeiro 2002 - Dezembro 2012</p>
+                        </div>
+
                     </div>
-                    <div class="experiencia">
-                        <h3>Ensino Fundamental e Médio - Colégio Curitibano Adventista, Curitiba</h3>
-                        <p class="technical-font escolar">Janeiro 2002 - Dezembro 2012</p>
-                    </div>
-                    
-                    
                 </div>
             </div>
         </div>
-       <div id="socials">
+
+        <!-- Conteúdo em Inglês -->
+        <div id="conteudo-ingles" style="display: none;">
+            <!-- Conteúdo lateral em Inglês -->
+            <div id="lateral" class="column">
+                <div class="conteudo-coluna">
+                    <div id="contato">
+                        <div align="center"><img src="https://raw.githubusercontent.com/rafaelfribeiro/web-curriculum/master/Images/eu.png" alt="Avatar" class="avatar" alt="picture of Rafael"></div>
+                        <h2 style="color: white;text-align: center;">Rafael Ribeiro</h2>
+                        <div>
+                            <p>Email: rrafaelrribeiro@gmail.com</p>
+                            <p>Phone: +55 (41) 99597-4881</p>
+                        </div>
+                    </div>
+
+                    <div id="habilidades">
+                        <h3 style="color: white;">Skills</h3>
+                        <h4>Python</h4>
+                        <div class="bar">
+                            <div class="progress" style=" border-radius: 15px;"></div>
+                        </div>
+
+                        <h4>VB.NET</h4>
+                        <div class="bar">
+                            <div class="progress" style=" border-radius: 15px;"></div>
+                        </div>
+
+                        <h4>C#</h4>
+                        <div class="bar">
+                            <div class="progress" style=" border-radius: 15px;"></div>
+                        </div>
+
+                        <h4>Java</h4>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+
+                        <h4>Node.js</h4>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+
+                        <h4>JavaScript</h4>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+
+                        <h4>Spark</h4>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+
+                        <h4>CSS</h4>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+
+                        <h4>SQL and MySQL</h4>
+                        <div class="bar">
+                            <div class="progress" style=" border-radius: 15px;"></div>
+                        </div>
+
+                        <h4>NoSQL</h4>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+
+                    <div id="idiomas">
+                        <h3 style="color: white;">Languages</h3>
+
+                        <h4>Portuguese</h4>
+                        <div class="bar">
+                            <div class="progress" style=" border-radius: 15px;"></div>
+                        </div>
+
+                        <h4>English</h4>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+
+                        <h4>German</h4>
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="toggle-button" class="toggle-icon" onclick="toggleLateral()">
+                <i id="toggle-icon" class="fa fa-times"></i>
+            </div>
+
+            <!-- Conteúdo principal em Inglês -->
+            <div id="main" class="column">
+                <div class="conteudo-coluna">
+                    <div id="experiencias">
+                        <h1 style="margin: 1em 0px;"><i class="fa fa-briefcase" style="font-size:36px;"></i> Professional Experiences</h1>
+                        <div class="experiencia">
+                            <h2>BRADESCO S/A - Analyst</h2>
+                            <p class="technical-font">July 2022 - Present</p>
+                            <p>
+                            <ul>
+                                <li>Process automation and ETLs using Python, C#, VB.NET, and SAS</li>
+                                <li>Fraud studies and PLDFT for rule application, scenario creation, and official responses to BACEN using SAS or Spark, consuming data from Datalake/Hadoop, SAS Grid, Teradata, data streaming, or batch files</li>
+                                <li>Development and maintenance of departmental applications in Python or VB.NET</li>
+                                <li>Data exploration, hypothesis testing, and ETL creation</li>
+                                <li>Data mining using Python or SAS</li>
+                                <li>Text Mining and NLP</li>
+                                <li>Real-time report generation</li>
+                            </ul>
+                            </p>
+                        </div>
+                        <div class="experiencia">
+                            <h2>BRADESCO S/A - Analyst</h2>
+                            <p class="technical-font">November 2018 - June 2022</p>
+                            <p>In addition to fulfilling the duties performed as an intern, I created an administrative portal to centralize information related to the institution's administrative areas, indicator analysis, delivery of award panels, as well as an area for contesting results, dashboard creation and delivery that consume data from a <i>data warehouse</i> also structured after my hiring.
+                                <br>Since then, I have focused on process improvements and continued to maintain this robust tool that brought agility, control, efficiency, and savings to the network.
+                            </p>
+                        </div>
+                        <div class="experiencia">
+                            <h2>BRADESCO S/A - Intern</h2>
+                            <p class="technical-font">March 2018 - November 2018</p>
+                            <p class="description">Maintenance and creation of desktop tools in VB.NET and PHP web applications.<br> Directly responsible for planning and developing 2 systems that replaced 3 systems currently used in all retail branches of Bradesco for expense control and anti-waste campaigns.</p>
+                        </div>
+                        <div class="experiencia">
+                            <h2>SOFTWALL SOLUÇÕES EM TECNOLOGIA - Support Analyst</h2>
+                            <p class="technical-font">October 2016 - February 2018</p>
+                            <p class="description">N1 and, in some cases, N2 support for clients. Installation, configuration, and maintenance of AD, DNS, DHCP, FileServer, and firewall servers.<br>Backup routines with Iperius Backup and Veeam Backup. Participation in new company projects like integrating the ticket system with PowerBI for real-time report generation.</p>
+                        </div>
+                        <div class="experiencia">
+                            <h2>20º BATALHÃO DE INFANTARIA BLINDADO - Aspirant</h2>
+                            <p class="technical-font">February 2014 - December 2014</p>
+                            <p class="description">Training and Application Period - (05/2014 to 11/2014)<br> NPOR/CPOR are centers for the formation of the Brazilian Army's Temporary Officers, where various attributes of the affective areas such as emotional balance, cooperation, zeal, leadership, discipline, persistence, and resilience are developed and enhanced to consolidate the Reserve Officer's character and acquire the necessary attributes for platoon leadership.</p>
+                        </div>
+                        <div class="experiencia">
+                            <h2>AUTOMA CONSULTORIA &amp; INFORMÁTICA LTDA - Apprentice</h2>
+                            <p class="technical-font">February 2010 - January 2011</p>
+                            <p class="description">(Medium-sized national technology and IT company)<br> Administrative apprentice (02/2010 to 07/2010)<br> IT apprentice (07/2010 to 01/2011)<br> Administrative routines — electronic document control, financial data entry for bank reconciliation — SGI/ERP, data entry in a financial system — ERP.<br> Document archiving and backup copies.<br>Workstation configuration in an intranet environment.</p>
+                        </div>
+                    </div>
+
+                    <div id="escolaridade">
+                        <h1 style="margin: 1em -0px;"><img src="https://raw.githubusercontent.com/rafaelfribeiro/web-curriculum/master/Images/file-certificate.svg" style="width: 30px;"> Courses and Certificates</h1>
+
+                        <div class="experiencia">
+                            <h3>Microsoft - AZ 900 Fundamentals</h3>
+                            <p class="technical-font escolar">December 2023</p>
+                        </div>
+                        <div class="experiencia">
+                            <h3>Alura - Kafka: Producers, Consumers, and Streams</h3>
+                            <p class="technical-font escolar">December 2023</p>
+                        </div>
+                        <div class="experiencia">
+                            <h3>Alura - Kafka: Fast Delegate, Evolution, and Broker Cluster</h3>
+                            <p class="technical-font escolar">December 2023</p>
+                        </div>
+                        <div class="experiencia">
+                            <h3>Databricks - Fundamentals of the Databricks Lakehouse Platform Accreditation (V2)</h3>
+                            <p class="technical-font escolar">June 2023</p>
+                        </div>
+                        <div class="experiencia">
+                            <h3>Infomev - M2 - SAS Programming + Statistics Emphasis</h3>
+                            <p class="technical-font escolar">November 2022</p>
+                        </div>
+                        <div class="experiencia">
+                            <h3>Infomev - M3 - SAS Macro Language</h3>
+                            <p class="technical-font escolar">November 2022</p>
+                        </div>
+                        <div class="experiencia">
+                            <h3>Infomev - M4 - SAS Enterprise Miner</h3>
+                            <p class="technical-font escolar">November 2022</p>
+                        </div>
+                    </div>
+
+                    <div id="escolaridade">
+                        <h1 style="margin: 1em -0px;"><i class="fa fa-graduation-cap"></i> Education</h1>
+                        <div class="experiencia">
+                            <h3>Bachelor's in Information Systems - Universidade Positivo, Curitiba</h3>
+                            <p class="technical-font escolar">February 2015 - March 2021</p>
+                        </div>
+                        <div class="experiencia">
+                            <h3>Technical in Networks - Federação das Industrias do Estado do Paraná - FIEP, Curitiba</h3>
+                            <p class="technical-font escolar">February 2013 - June 2013</p>
+                        </div>
+                        <div class="experiencia">
+                            <h3>Primary and Secondary Education - Colégio Curitibano Adventista, Curitiba</h3>
+                            <p class="technical-font escolar">January 2002 - December 2012</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="socials">
             <div>
                 <a href="javascript:void(window.open('https://www.linkedin.com/in/rafael16ribeiro/'))">
                     <i class="fa fa-linkedin" aria-hidden="true"></i>
-
                 </a>
             </div>
-            <!-- <div>
-                <a href="javascript:void(window.open('https://www.instagram.com/rafael16ribeiro/'))">
-                    <img src="/img/instagram.png" />
-                </a>
-            </div> -->
-        </div> 
-        
+        </div>
 
         <script type="text/javascript">
-
-            function loadProgress(){
-                var position = [100,100, 80, 70, 90, 90, 95, 70, 100, 60, 100, 80, 30];
+            function loadProgress() {
+                var position = [100, 100, 80, 70, 90, 90, 95, 70, 100, 60, 100, 80, 30];
                 Array.from(document.getElementsByClassName('progress')).forEach((element, i) => {
 
-                var id = null;
-                var pos = 0;
-                clearInterval(id);
-                id = setInterval(frame, 10);
-                function frame() {
-                    if (pos == position[i]) {
-                        clearInterval(id);
-                    } else {
-                        pos++; 
-                        element.style.width = pos + '%'; 
+                    var id = null;
+                    var pos = 0;
+                    clearInterval(id);
+                    id = setInterval(frame, 10);
+
+                    function frame() {
+                        if (pos == position[i]) {
+                            clearInterval(id);
+                        } else {
+                            pos++;
+                            element.style.width = pos + '%';
+                        }
                     }
-                }
 
                 })
             }
             setTimeout(loadProgress, 1500);
 
-           
             function toggleLateral() {
                 var lateral = document.getElementById('lateral');
                 var toggleButtom = document.getElementById('toggle-button');
                 var toggleIcon = document.getElementById('toggle-icon');
-               
+
                 if (lateral.classList.contains('collapsed')) {
                     lateral.classList.remove('collapsed');
                     toggleButtom.classList.remove('barst');
@@ -520,11 +717,22 @@
                 } else {
                     lateral.classList.add('collapsed');
                     toggleButtom.classList.add('barst');
-                    toggleIcon.className = 'fa fa-bars'; 
+                    toggleIcon.className = 'fa fa-bars';
                 }
             }
 
+            window.onload = function() {
+                // Detecta o idioma do navegador
+                var userLang = navigator.language || navigator.userLanguage;
+                if (userLang !== 'pt-BR') {
+                    // Esconde o conteúdo em português
+                    document.getElementById('conteudo-portugues').style.display = 'none';
+                    // Mostra o conteúdo em inglês
+                    document.getElementById('conteudo-ingles').style.display = 'block';
+                }
+            };
         </script>
+    </div>
 </body>
 
 </html>
