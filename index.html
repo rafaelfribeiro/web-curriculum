@@ -629,11 +629,12 @@
                 // Detecta o idioma do navegador
                 var userLang = navigator.language || navigator.userLanguage;
                 if (userLang.startsWith('pt')) {
-                    document.getElementById('conteudo-portugues').style.display = 'none';
-                    document.getElementById('conteudo-ingles').removeAttribute('style');
-                }else{
                     document.getElementById('conteudo-ingles').style.display = 'none';
                     document.getElementById('conteudo-portugues').removeAttribute('style');
+                }else{
+                    document.getElementById('conteudo-portugues').style.display = 'none';
+                    document.getElementById('conteudo-ingles').removeAttribute('style');
+                    
                 }
             };
         </script>
